@@ -13,3 +13,6 @@ class Client(Base):
     city_id = Column(Integer, ForeignKey("city.id"), nullable=False)
 
     city = relationship("City")
+
+    def __repr__(self):
+        return f"Client(id={self.id}, name={self.name}, email={self.email}, city_id={self.city_id})"

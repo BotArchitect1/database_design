@@ -13,3 +13,6 @@ class Buy(Base):
 
     client = relationship("Client")
     buy_books = relationship("BuyBook", back_populates="buy")
+
+    def __repr__(self):
+        return f"Buy(id={self.id}, wishes={self.wishes}, client_id={self.client_id})"

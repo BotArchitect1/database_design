@@ -15,3 +15,6 @@ class BuyStep(Base):
 
     buy = relationship("Buy")
     step = relationship("Step")
+
+    def __repr__(self):
+        return f"<BuyStep {self.buy_id} {self.step_id} {self.start_date} {self.end_date}>"
